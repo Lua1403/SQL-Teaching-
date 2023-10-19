@@ -1,0 +1,2 @@
+# SQL-Teaching-
+Lessons resolved
