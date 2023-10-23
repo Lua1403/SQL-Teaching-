@@ -116,6 +116,14 @@
     ```
 21. Can you use an inner join to pair each character name with the actor who plays them? Select the columns: character.name, character_actor.actor_name
     ```
-    
+    SELECT character.name, character_actor.actor_name
+    FROM character
+    INNER JOIN character_actor
+    ON character.id = character_actor.character_id
     ```
+22. Can you use two joins to pair each character name with the actor who plays them? Select the columns: character.name, actor.name
+    ´´´
+    
+    ´´´
+
      
