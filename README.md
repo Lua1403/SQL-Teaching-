@@ -122,8 +122,20 @@
     ON character.id = character_actor.character_id
     ```
 22. Can you use two joins to pair each character name with the actor who plays them? Select the columns: character.name, actor.name
-    ´´´
+    ```
+    SELECT character.name, actor.name
+    FROM character
+    INNER JOIN character_actor
+    ON character.id = character_actor.character_id
+    INNER JOIN actor
+    ON actor.id = character_actor.actor_id
+    ```
+23. Can you return a list of characters and TV shows that are not named "Willow Rosenberg" and not in the show "How I Met Your Mother"?
+    ```
     
-    ´´´
+    ```
+    
+
+
 
      
