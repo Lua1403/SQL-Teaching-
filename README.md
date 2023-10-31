@@ -132,9 +132,35 @@
     ```
 23. Can you return a list of characters and TV shows that are not named "Willow Rosenberg" and not in the show "How I Met Your Mother"?
     ```
-    
+    SELECT character.name, tv_show.name
+    FROM character
+    INNER JOIN character_tv_show
+    ON character.id = character_tv_show.character_id
+    INNER JOIN tv_show
+    ON tv_show.id = character_tv_show.tv_show_id WHERE character.name != 'Willow Rosenberg' AND tv_show.name != 'How I Met Your Mother'
+    ```
+24. Can you use left joins to match character names with the actors that play them? Select the columns: character.name, actor.name
+    ```
+    SELECT character.name, actor.name
+    FROM character
+    LEFT JOIN character_actor
+    ON character.id = character_actor.character_id
+    LEFT JOIN actor
+    ON actor.id = character_actor.actor_id
+    ```
+25. Can you use left joins to match character names with the actors that play them, and use aliases to make the query shorter? The aliases for character, character_actor, and actor should be c, ca, and a.
+    ```
+    SELECT c.name, a.name
+    FROM character AS c
+    LEFT JOIN character_actor AS ca
+    ON c.id = ca.character_id
+    LEFT JOIN actor AS a
+    ON a.id = ca.actor_id
+    ```
+26. Can you use left joins to match character names with the actors that play them, and use aliases to call the two columns returned character and actor?
     ```
     
+    ```
 
 
 
