@@ -1,5 +1,5 @@
 # SQL-Teaching-
-1. SELETC all rows from family members
+1. SELECT all rows from family members
    ```
    SELECT *
    FROM family_members
