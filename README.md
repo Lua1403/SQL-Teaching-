@@ -137,7 +137,8 @@
     INNER JOIN character_tv_show
     ON character.id = character_tv_show.character_id
     INNER JOIN tv_show
-    ON tv_show.id = character_tv_show.tv_show_id WHERE character.name != 'Willow Rosenberg' AND tv_show.name != 'How I Met Your Mother'
+    ON tv_show.id = character_tv_show.tv_show_id
+    WHERE character.name != 'Willow Rosenberg' AND tv_show.name != 'How I Met Your Mother'
     ```
 24. Can you use left joins to match character names with the actors that play them? Select the columns: character.name, actor.name
     ```
@@ -159,9 +160,17 @@
     ```
 26. Can you use left joins to match character names with the actors that play them, and use aliases to call the two columns returned character and actor?
     ```
-    
+    SELECT character.name AS character, actor.name AS actor
+    FROM character
+    LEFT JOIN character_actor
+    ON character.id = character_actor.character_id
+    LEFT JOIN actor
+    ON character_actor.actor_id = actor.id
     ```
-
+27. Can you run a query that returns the name of an employee and the name of their boss? Use column aliases to make the columns employee_name and boss_name.
+    ``
+    aa
+    ``
 
 
      
